@@ -1,0 +1,5 @@
+apiVersion: v2
+name: my-custom-app
+description: A simple Helm chart with Deployment, Service, and Ingress
+version: 0.2.0
+appVersion: "1.0.0"
