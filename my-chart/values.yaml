@@ -1,14 +1,11 @@
 replicaCount: 1
-
 image:
   repository: ghcr.io/arjunbutola35/my-custom-app
-  tag: "0.2.0"
+  tag: "88a24cb4afc27a74578fbfa84f1b6c13b45e38bf"
   pullPolicy: Never
-
 service:
   type: ClusterIP
   port: 80
-
 ingress:
   enabled: true
   host: myapp.local
