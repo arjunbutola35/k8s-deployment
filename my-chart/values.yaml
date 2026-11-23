@@ -1,4 +1,4 @@
-replicaCount: 1
+replicaCount: 0
 image:
   repository: ghcr.io/arjunbutola35/my-custom-app
   tag: "76277e7011eac592da365021344e686cc965cdb9"
