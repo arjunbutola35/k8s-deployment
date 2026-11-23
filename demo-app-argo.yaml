@@ -1,25 +1,26 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-app
+  name: demo-argocd-app
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/arjunbutola35/k8s-deployment.git
     targetRevision: HEAD
-    path: demo-app          # Folder path to your Helm chart in Git
+    path: my-chart         # Folder path to your Helm chart in Git
     helm:
       releaseName: demo-app
       valueFiles:
         - values.yaml
   destination:
-    server: https://default.svc
+    name: in-cluster
     namespace: web-apps
   syncPolicy:
     automated:
       prune: true           # Deletes resources removed from Git
       selfHeal: true        # Reverts manual kubectl edits back to Git state
+      #selfHeal: false        # Reverts manual kubectl edits back to Git state
     syncOptions:
       - CreateNamespace=true
 

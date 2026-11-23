@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: my-custom-app
+  repository: ghcr.io/arjunbutola35/my-custom-app
   tag: "0.2.0"
   pullPolicy: Never
 
