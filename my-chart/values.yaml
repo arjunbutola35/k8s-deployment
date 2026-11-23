@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: ghcr.io/arjunbutola35/my-custom-app
-  tag: "fab1ba448b9fdf2e2e5196308e729df28a04b12e"
+  tag: "c5079549ab23390dd2eb349be7a9597e762f279c"
   pullPolicy: IfNotPresent
 service:
   type: ClusterIP
